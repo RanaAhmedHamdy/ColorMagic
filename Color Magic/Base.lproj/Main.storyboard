@@ -43,19 +43,22 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="6nc-2F-Ojm"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uIq-21-jdq">
                             <connections>
-                                <segue destination="ob9-dS-ysX" kind="show" id="AOF-Vn-5qp"/>
+                                <segue destination="ob9-dS-ysX" kind="show" identifier="presentColorPickerVC" id="AOF-Vn-5qp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ColorNameLB" destination="5bj-e1-Tap" id="RxT-Mb-ykC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Color PickerVC-->
         <scene sceneID="lU6-hq-mGS">
             <objects>
-                <viewController id="ob9-dS-ysX" sceneMemberID="viewController">
+                <viewController id="ob9-dS-ysX" customClass="ColorPickerVC" customModule="Color_Magic" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mQH-iG-COa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +73,9 @@
                                         <state key="normal" title="Green">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnPressedWithSender:" destination="ob9-dS-ysX" eventType="touchUpInside" id="wF3-qy-zkc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-8A-zgZ">
                                         <rect key="frame" x="0.0" y="120.5" width="375" height="120.5"/>
@@ -78,6 +84,9 @@
                                         <state key="normal" title="Yellow">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnPressedWithSender:" destination="ob9-dS-ysX" eventType="touchUpInside" id="YwJ-EY-MsX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-wL-Sd7">
                                         <rect key="frame" x="0.0" y="241" width="375" height="121"/>
@@ -86,6 +95,9 @@
                                         <state key="normal" title="Blue">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnPressedWithSender:" destination="ob9-dS-ysX" eventType="touchUpInside" id="5ua-6R-z7o"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIL-4X-Hr7">
                                         <rect key="frame" x="0.0" y="362" width="375" height="120.5"/>
@@ -94,6 +106,9 @@
                                         <state key="normal" title="Red">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnPressedWithSender:" destination="ob9-dS-ysX" eventType="touchUpInside" id="734-Rv-kge"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyo-a6-fCU">
                                         <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
@@ -102,6 +117,9 @@
                                         <state key="normal" title="Purple">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnPressedWithSender:" destination="ob9-dS-ysX" eventType="touchUpInside" id="q3A-X9-nNs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

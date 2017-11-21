@@ -8,14 +8,22 @@
 
 import UIKit
 
-class ColorPickerVC: UIButton {
+class ColorPickerVC: UIViewController {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var delegate: colorTransferDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
-    */
 
+    @IBAction func colorBtnPressed(sender: UIButton) {
+        
+        if(delegate != nil) {
+            print(sender.titleLabel?.text!)
+            delegate?.colorUserChose(color: sender.backgroundColor!, colorName: sender.titleLabel!.text!)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }
