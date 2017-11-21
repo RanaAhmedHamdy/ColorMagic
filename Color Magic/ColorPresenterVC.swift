@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ColorPresenterVC.swift
 //  Color Magic
 //
 //  Created by Hazem Mohamed Magdy on 11/21/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ColorPresenterVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
